@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tilt Neon", sans-serif;
+}
+#wrapper{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.left, .right{
+    width: 50%;
+    height: 100%;
+}
+.left{
+    background-color: rgba(0, 0, 255, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    text-align: center;
+    background-size: 50px 50px;
+    background-color: rgba(12, 46, 239, 0.566);
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -ms-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    h2{
+        font-size: 2rem;
+    }
+    p{
+        margin-top: 16.3rem;
+    }
+}
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+textarea {
+    box-shadow: 4px 4px 10px 0px #031796;
+    border-radius: 5px;
+    padding: 15px;
+    width: 35rem;
+    margin-right: 2rem;
+    background-color: rgba(28, 17, 69, 0.788);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+.input input{
+    cursor: pointer;
+}
+
+.note {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    color: white;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* Prevent content overflow */
+    overflow: auto;
+
+    /* Ensure scrollbar appears only when necessary */
+    overflow-x: hidden;  /* Disable horizontal scrolling */
+    overflow-y: auto;  /* Enable vertical scrolling if needed */
+
+    /* Optional: Styling scrollbar (for Webkit browsers) */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Firefox */
+
+    /* Webkit (Chrome, Edge, Safari) scrollbar styling */
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 3px;
+    }
+}
+
+
+.notesContainer{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.close{
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0.75em 1em;
+    color: blue;
+    border: 0.15em solid blue;
+    border-radius: calc(0.75em + 0.5em + 0.15em);
+    transition: 3s;
+    cursor: pointer;
+  }
+  .button:before, .button:after {
+    content: "";
+    position: absolute;
+    top: -1.5em;
+    z-index: -1;
+    width: 200%;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 40%;
+    background-color: rgba(0, 0, 255, 0.25);
+    transition: 3s;
+  }
+  .button:before {
+    left: -80%;
+    transform: translate3d(0, 5em, 0) rotate(-340deg);
+  }
+  .button:after {
+    right: -80%;
+    transform: translate3d(0, 5em, 0) rotate(390deg);
+  }
+  .button:hover, .button:focus {
+    color: white;
+  }
+  .button:hover:before, .button:hover:after, .button:focus:before, .button:focus:after {
+    transform: none;
+    background-color: rgba(0, 0, 255, 0.75);
+  }
