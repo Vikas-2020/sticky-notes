@@ -21,6 +21,7 @@
 }
 .right{
     text-align: center;
+    padding: 0 5px 0 5px;
     background-size: 50px 50px;
     background-color: rgba(12, 46, 239, 0.566);
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
