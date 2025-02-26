@@ -11,7 +11,6 @@
 }
 .left, .right{
     width: 50%;
-    height: 100%;
 }
 .left{
     background-color: rgba(0, 0, 255, 0.55);
@@ -41,15 +40,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     padding-bottom: 1rem;
+    width: 100%;
+}
+form{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.text-and-button{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.add-note{
+    width: 6.5rem;
+}
+.colorinput{
+    margin-bottom: 4rem;
+}
 textarea {
     box-shadow: 4px 4px 10px 0px #031796;
     border-radius: 5px;
     padding: 15px;
-    width: 35rem;
+    width: 80%;
     margin-right: 2rem;
     background-color: rgba(28, 17, 69, 0.788);
     color: rgb(255, 255, 255);
@@ -165,4 +183,20 @@ textarea {
   .button:hover:before, .button:hover:after, .button:focus:before, .button:focus:after {
     transform: none;
     background-color: rgba(0, 0, 255, 0.75);
+  }
+
+
+  @media screen and (max-width:1542px){
+    .button{
+        margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width:1024px){
+    #wrapper{
+        flex-direction: column;
+    }
+    .left, .right{
+        width: 100%;
+    }
   }
