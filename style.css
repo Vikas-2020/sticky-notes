@@ -20,6 +20,7 @@
     align-items: center;
 }
 .right{
+    position: relative;
     text-align: center;
     padding: 0 5px 0 5px;
     background-size: 50px 50px;
@@ -61,35 +62,32 @@ textarea {
 
 .note {
     width: 150px;
-    height: 150px;
-    position: relative;
+    height: 100px;
     color: white;
     padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
+
+    /* Ensure content does not overflow */
+    overflow-y: auto; /* Scrollbar only if needed */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     
-    /* Prevent content overflow */
-    overflow: auto;
-
-    /* Ensure scrollbar appears only when necessary */
-    overflow-x: hidden;  /* Disable horizontal scrolling */
-    overflow-y: auto;  /* Enable vertical scrolling if needed */
-
+    /* Ensure text wraps properly */
+    word-wrap: break-word; 
+    white-space: pre-wrap; /* Preserves spaces & wraps text */
+    
     /* Optional: Styling scrollbar (for Webkit browsers) */
     scrollbar-width: thin; /* Firefox */
     scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Firefox */
-
-    /* Webkit (Chrome, Edge, Safari) scrollbar styling */
-    &::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 3px;
-    }
 }
 
+/* Webkit scrollbar styles (Chrome, Edge, Safari) */
+.note::-webkit-scrollbar {
+    width: 6px;
+}
+
+.note::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
 
 .notesContainer{
     display: flex;
@@ -98,9 +96,31 @@ textarea {
 }
 
 .close{
-    top: 5px;
-    right: 5px;
+    top: -3px;
+    right: 2px;
     position: absolute;
+    cursor: pointer;
+    color: white;
+}
+.parentDiv{
+    position: relative;
+    padding-top: 10px;
+}
+.undo{
+    top: 10px;
+    right: 10px;
+}
+.timestamp{
+    color: white;
+    font-size: 10px;
+}
+
+.edit{
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 12px;
     cursor: pointer;
 }
 
